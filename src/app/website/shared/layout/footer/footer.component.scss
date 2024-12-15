@@ -1,0 +1,52 @@
+footer {
+    width: 98.93vw;
+    height: 120px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Максимальная ширина контейнера */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Промежуток между иконками */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 35px; /* Размер иконок */
+    height: 35px;
+}
+
+.text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.text p {
+    margin: 0;
+    font-size: 30px; /* Размер текста */
+    font-family: 'Cursive', cursive; /* Шрифт */
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 18px;
+}

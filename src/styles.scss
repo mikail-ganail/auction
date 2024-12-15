@@ -1,27 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: local("Montserrat"),
-    url("../src/assets/font/Montserrat-Regular.woff") format("woff");
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: local("Montserrat"),
+        url("../src/assets/font/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  src: local("Montserrat"),
-    url("../src/assets/font/Montserrat-Medium.woff") format("woff");
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: local("Montserrat"),
+        url("../src/assets/font/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  src: local("Montserrat"),
-    url("../src/assets/font/Montserrat-SemiBold.woff") format("woff");
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: local("Montserrat"),
+        url("../src/assets/font/Montserrat-SemiBold.woff") format("woff");
 }
 
 body {
-  margin: 0;
-  background-color: #ffffff;
-  font-family: "Montserrat";
+    margin: 0;
+    background-color: #ffffff;
+    font-family: "Montserrat";
 }
