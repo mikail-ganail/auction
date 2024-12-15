@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    gap: 20px;
+}
+
+.male {
+    width: 70vw;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        gap: 15px;
+        padding: 14px 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        border: 1px solid black;
+
+        img {
+            width: 12px;
+        }
+    }
+}
+
+.filter {
+    margin-top: 82px;
+    img {
+        max-height: calc(100vh - 240px);
+        margin-left: 20px;
+    }
+}
+
+.products {
+    margin-top: 25px;
+}
