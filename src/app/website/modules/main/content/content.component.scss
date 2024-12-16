@@ -1,0 +1,66 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    backdrop-filter: blur(5px); /* Эффект размытия */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Для обеспечения того, чтобы модалка была сверху */
+}
+
+.modal-content {
+    width: 1000px;
+    height: 650px;
+    background-color: white; /* Фон модального окна */
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ff4d4f; /* Цвет кнопки закрытия */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #ff1a1a; /* Цвет кнопки при наведении */
+}
+
+img {
+    cursor: pointer;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.top {
+    display: flex;
+}
+
+.top-prod {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+
+    p {
+        margin: 0;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+}

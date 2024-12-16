@@ -4,15 +4,78 @@
     </div>
     <div class="male">
         <div class="sort">
-            <div>
-                Новинки
-                <img src="../../../../assets/icon/main/arrow.svg" alt="" />
+            <div class="select" (click)="openSelect()">
+                <div>
+                    {{ currentSort }}
+                    <img src="assets/icon/main/arrow.svg" alt="" />
+                </div>
+                <ul *ngIf="isSelect">
+                    <li (click)="sortByIDAscending()">Новинки</li>
+                    <li (click)="sortByIDDescending()">Старые</li>
+                    <li (click)="sortByBidAscending()">Меньше ставок</li>
+                    <li (click)="sortByBidDescending()">Больше ставок</li>
+                    <li (click)="sortByTermAscending()">Торги кончаются</li>
+                    <li (click)="sortByPriceAscending()">
+                        Цена: по возрастанию
+                    </li>
+                    <li (click)="sortByPriceDescending()">Цена: по убыванию</li>
+                </ul>
             </div>
-            <div>
-                Меньше ставок
-                <img src="../../../../assets/icon/main/arrow.svg" alt="" />
+            <div class="select">
+                <div>
+                    Меньше ставок
+                    <img src="assets/icon/main/arrow.svg" alt="" />
+                </div>
             </div>
         </div>
-        <div class="products">lol</div>
+        <div class="products">
+            <div
+                *ngFor="let product of productList"
+                class="product"
+                (click)="content.openProduct()"
+            >
+                <div class="top-prod">
+                    <p style="font-weight: 400">
+                        Ставок:
+                        <span style="font-weight: 500">{{ product.bid }}</span>
+                    </p>
+                    <div>
+                        <ng-container
+                            *ngIf="
+                                calculateRemainingTime(product.term) as timeData
+                            "
+                        >
+                            <span
+                                [ngStyle]="{
+                                    color: timeData.isCritical
+                                        ? '#FF0000'
+                                        : 'white'
+                                }"
+                            >
+                                {{ timeData.timeString }}
+                            </span>
+                        </ng-container>
+                        <img src="assets/icon/main/time.svg" alt="" />
+                    </div>
+                </div>
+                <div class="img-block">
+                    <img src="{{ product.url }}" alt="" />
+                </div>
+                <div class="text-con">
+                    <p class="title">{{ product.title }}</p>
+                    <div class="cost">
+                        <p style="text-decoration: underline; font-size: 20px">
+                            {{ product.cost[0] }} RUB
+                        </p>
+                        <p style="text-decoration: line-through">
+                            {{ product.cost[1] }} RUB
+                        </p>
+                    </div>
+                    <p>От: {{ product.from }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<app-content #content></app-content>

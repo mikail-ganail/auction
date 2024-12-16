@@ -1,8 +1,9 @@
-.pg-background{
-    height: 100%;
+.pg-background {
+    height: calc(100vh - 260px);
 }
 .login {
-
+    position: absolute;
+    bottom: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,11 +12,11 @@
     padding: 0 0px;
     margin-top: 105px;
 }
-.login .macan{
+.login .macan {
     margin-left: 80px;
     margin-right: -60px;
 }
-.login .shaman{
+.login .shaman {
     margin-left: 30px;
 }
 .login img {
@@ -34,7 +35,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 2;
-    background-color: #fff; 
+    background-color: #fff;
 
     h1 {
         margin-bottom: 30px;
@@ -47,7 +48,6 @@
         align-items: center;
         margin-bottom: 15px;
         width: 100%;
-        
 
         .country-code {
             display: flex;
@@ -59,13 +59,13 @@
             border-radius: 8px 0 0 8px;
             font-size: 14px;
             color: #333;
-            .mir{
+            .mir {
                 width: 25px;
                 padding-left: -5px;
                 padding-right: 5px;
                 height: auto;
-            };
-            .strelka{
+            }
+            .strelka {
                 width: 15px;
                 height: auto;
             }

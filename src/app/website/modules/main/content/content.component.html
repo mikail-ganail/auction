@@ -1,0 +1,41 @@
+<div class="modal-overlay" *ngIf="isProduct">
+    <div class="modal-content">
+        <img (click)="closeProduct()" src="assets/icon/main/close.svg" alt="" />
+        <div class="all">
+            <div class="top">
+                <img src="assets/image/content/loolimg.png" alt="" />
+                <img
+                    (click)="couu()"
+                    src="assets/image/content/new.png"
+                    alt=""
+                />
+                <div class="top-prod">
+                    <p style="font-weight: 400">
+                        Ставок:
+                        <span style="font-weight: 500">{{ count }}</span>
+                    </p>
+                    <div>
+                        <img src="assets/icon/main/timeb.svg" alt="" />
+                        <ng-container
+                            *ngIf="calculateRemainingTime(datet) as timeData"
+                        >
+                            <span
+                                [ngStyle]="{
+                                    width: '145px',
+                                    color: timeData.isCritical
+                                        ? '#FF0000'
+                                        : 'white'
+                                }"
+                            >
+                                {{ timeData.timeString }}
+                            </span>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="assets/image/content/looltext.png" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
